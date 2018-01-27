@@ -8,7 +8,7 @@ class App extends React.Component {
     this.state = {
       searchResults: [{name: 'random name',
       artist: 'random artist',
-      album: 'random album'}];,
+      album: 'random album'}],
       playlistName: '',
       playlistTracks: [{name: 'random name',
       artist: 'random artist',
@@ -49,7 +49,7 @@ savePlaylist() {
     playlistName: 'New Playlist',
      playlistTracks: []
    });
-  }
+ })
 }
 
 search(term) {
@@ -72,9 +72,11 @@ render () {
         this.state.playlistTracks} onRemove={this.removeTrack}
         onNameChange={this.updatePlaylistName}
         onSave={this.savePlaylist}/>
-      } />
+
     </div>
   </div>
 </div>
 );
+}
+
 }
