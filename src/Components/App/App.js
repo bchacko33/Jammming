@@ -1,5 +1,9 @@
+import React from 'react';
 import './app.css';
 import Spotify from '../../util/Spotify';
+import SearchBar from './SearchBar';
+import SearchResults from './SearchResults';
+import Playlist from './Playlist/Playlist.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,7 +51,7 @@ updatePlaylistName(name) {
 
 savePlaylist() {
    let trackURIs = this.state.playlistTracks.map(track => track.uri);
-   Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
+   Spotify.savePlaylist(this.state.playlistName, trackURIs).then(() => {
      this.setState({
     playlistName: 'New Playlist',
      playlistTracks: []
@@ -83,3 +87,4 @@ render () {
 }
 
 }
+export default App;
