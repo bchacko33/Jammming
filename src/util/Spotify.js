@@ -58,7 +58,7 @@ const Spotify = {
       return;
       const accessToken = Spotify.getAccessToken();
     let header = { Authorization: `Bearer ${accessToken}` };
-
+    let userID;
   return  fetch(`https://api.spotify.com/v1/me`, { headers: header })
       .then(response => response.json())
         .then(jsonResponse =>
@@ -66,7 +66,7 @@ const Spotify = {
             if(!jsonResponse.id)
               return;
 
-            let userID = jsonResponse.id;
+            userID = jsonResponse.id;
 
           return  fetch(`https://api.spotify.com/v1/users/${userID}/playlists`,
               {
