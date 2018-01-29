@@ -67,6 +67,7 @@ search(term) {
 }
 
 render () {
+    console.log("Rendering app");
   return (
 <div>
   <h1>Ja<span className="highlight">mmm</span>ing</h1>
