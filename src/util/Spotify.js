@@ -82,7 +82,8 @@ const Spotify = {
                       return;
 
                     let playlistID = jsonResponse.id
-
+                    console.log(trackURIs);
+                    console.log(playlistName);
                   return  fetch(`https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}/tracks`,
                       {
                         headers: header,

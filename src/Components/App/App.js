@@ -10,14 +10,10 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      searchResults: [{name: 'random name',
-      artist: 'random artist',
-      album: 'random album'}],
-      playlistName: '',
-      playlistTracks: [{name: 'random name',
-      artist: 'random artist',
-      album: 'random album'}]
-    }
+      searchResults: [],
+      playlistName: 'New Playlist',
+      playlistTracks: []
+    };
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
